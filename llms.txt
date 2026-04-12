@@ -1,0 +1,33 @@
+# Site
+
+## MCP Access
+- MCP endpoint: //mcp
+- Protocol: Model Context Protocol (SSE transport)
+- Auth: none required
+- Docs: //mcp/info
+
+## Collections
+- posts: Blog Posts (27 published documents)
+- pages: Pages (4 published documents)
+
+## Recent Content
+- [5 Famous Ski Racers from Europe](//posts/famous-european-skiers)
+- [5 berühmte Skiläufer aus Europa](//posts/bekannte-europaeische-skilaeufer)
+- [Træn dig klar til skiferie – og mærk forskellen på pisterne](//pages/traening-til-skiferie)
+- [Train for Your Ski Holiday – and Feel the Difference on the Slopes](//pages/training-for-ski-holiday)
+- [Méribel, Frankrig – hjertet af Les Trois Vallées](//posts/skiferie-meribel-frankrig)
+- [Derfor er god dokumentation afgørende i din CMS-løsning](//posts/god-dokumentation-i-cms)
+- [Om Os](//pages/om-os)
+- [About Us](//pages/about-en)
+- [Pitch via API](//posts/pitch-via-api)
+- [Ski Holiday: Coziness on the Slopes and at the Table](//posts/ski-holiday-coziness-on-the-slopes-and-at-the-table)
+- [Skiferie: Hygge på pisten og ved bordet](//posts/skiferie-hygge-mad-og-drikke)
+- [Hello, World!](//posts/hello-world)
+- [Building Websites with AI](//posts/building-with-ai)
+- [Pitchet via API](//posts/pitchet-via-api)
+- [Tennisalbue: Symptomer, årsager og effektiv genoptræning](//posts/tennisalbue-symptomer-rsager-og-effektiv-genoptr-ning)
+- [Far og datter på ski i Norges fjelde – en oplevelse for livet](//posts/far-og-datter-p-ski-i-norges-fjelde-en-oplevelse-for-livet)
+- [Velkommen til AALLM – Foreningen for LLM-værktøjer i Aalborg](//posts/aallm-forening-for-llm-vaerktoejer)
+- [Whistler, Canada – Nordamerikas svar på det perfekte skiparadis](//posts/skiferie-whistler-canada)
+- [Banff, Canada – skiferie midt i Rocky Mountains](//posts/skiferie-banff-canada)
+- [Chamonix, Frankrig – skisportens vugge ved foden af Mont Blanc](//posts/skiferie-chamonix-frankrig)

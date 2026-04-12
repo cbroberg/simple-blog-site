@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>❄️ Ski & Winter Slideshow</title>
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --accent: #F7BB2E;
+      --text: #e0e0e0;
+      --overlay-start: rgba(10,15,30,0);
+      --overlay-end: rgba(10,15,30,0.85);
+      --thumb-size: 80px;
+      --arrow-bg: rgba(255,255,255,0.15);
+      --arrow-hover: rgba(255,255,255,0.32);
+      --dot-inactive: rgba(255,255,255,0.35);
+      --dot-active: #fff;
+      --transition: 0.7s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ─────────────────────────────── */
+    .slideshow-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.03em;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.6);
+    }
+
+    .header h1 .snowflake {
+      display: inline-block;
+      animation: spin 8s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ── MAIN STAGE ─────────────────────────── */
+    .stage {
+      position: relative;
+      width: 100%;
+      height: 65vh;
+      min-height: 280px;
+      max-height: 780px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #050810;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.7);
+      cursor: pointer;
+    }
+
+    /* ── SLIDES ─────────────────────────────── */
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      /* Prevent image drag */
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* ── GRADIENT OVERLAY + CAPTION ─────────── */
+    .caption-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(10,15,30,0.5) 75%,
+        rgba(10,15,30,0.88) 100%
+      );
+      display: flex;
+      align-items: flex-end;
+      padding: 0 56px 20px 24px;
+      pointer-events: none;
+    }
+
+    .caption-text {
+      color: #fff;
+      font-size: clamp(0.78rem, 2vw, 1.05rem);
+      font-weight: 400;
+      line-height: 1.45;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+      max-width: 780px;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── SLIDE COUNTER ──────────────────────── */
+    .counter {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: rgba(10,15,30,0.6);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* ── ARROW BUTTONS ──────────────────────── */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      width: 52px;
+      height: 52px;
+      min-width: 44px;
+      min-height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: var(--arrow-bg);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.15s;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .arrow:hover, .arrow:focus-visible {
+      background: var(--arrow-hover);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .arrow:active {
+      transform: translateY(-50%) scale(0.96);
+    }
+
+    .arrow-left  { left: 12px; }
+    .arrow-right { right: 12px; }
+
+    .arrow svg {
+      width: 22px;
+      height: 22px;
+      stroke: #fff;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+
+    /* ── DOTS ───────────────────────────────── */
+    .dots-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      padding: 0 8px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--dot-inactive);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.2s;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+      min-width: 9px;
+    }
+
+    .dot.active {
+      background: var(--dot-active);
+      transform: scale(1.35);
+    }
+
+    .dot:hover:not(.active) {
+      background: rgba(255,255,255,0.6);
+    }
+
+    /* Touch-expand dots without changing visual */
+    .dot::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+    }
+    .dot { position: relative; }
+
+    /* ── THUMBNAIL STRIP ────────────────────── */
+    .thumb-strip {
+      margin-top: 16px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.2) transparent;
+      padding-bottom: 6px;
+    }
+
+    .thumb-strip::-webkit-scrollbar {
+      height: 4px;
+    }
+    .thumb-strip::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .thumb-strip::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.2);
+      border-radius: 2px;
+    }
+
+    .thumb-inner {
+      display: flex;
+      gap: 8px;
+      padding: 4px 2px;
+      width: max-content;
+    }
+
+    .thumb-btn {
+      width: var(--thumb-size);
+      height: var(--thumb-size);
+      flex-shrink: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2.5px solid transparent;
+      padding: 0;
+      background: #050810;
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .thumb-btn.active {
+      border-color: #fff;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.3), 0 4px 16px rgba(0,0,0,0.5);
+      transform: scale(1.06);
+    }
+
+    .thumb-btn:hover:not(.active) {
+      border-color: rgba(255,255,255,0.45);
+      transform: scale(1.04);
+    }
+
+    .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* ── PROGRESS BAR ───────────────────────── */
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 0 2px 2px 0;
+      z-index: 15;
+      width: 0%;
+      transition: none;
+    }
+
+    .progress-bar.animating {
+      transition: width linear;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 600px) {
+      .slideshow-wrapper { padding: 16px 10px 28px; }
+      .stage { height: 58vw; min-height: 200px; border-radius: 10px; }
+      .arrow { width: 42px; height: 42px; font-size: 1.1rem; }
+      .arrow-left  { left: 8px; }
+      .arrow-right { right: 8px; }
+      :root { --thumb-size: 64px; }
+      .caption-overlay { padding: 0 44px 14px 16px; }
+    }
+
+    @media (prefers-color-scheme: light) {
+      /* Keep dark theme regardless — cinematic look */
+    }
+
+    /* ── FOCUS VISIBLE ──────────────────────── */
+    .arrow:focus-visible,
+    .dot:focus-visible,
+    .thumb-btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slideshow-wrapper" role="region" aria-label="Ski and winter slideshow">
+
+  <!-- Header -->
+  <div class="header">
+    <h1><span class="snowflake" aria-hidden="true">❄️</span> Ski &amp; Winter</h1>
+  </div>
+
+  <!-- Stage -->
+  <div class="stage" id="stage"
+       aria-live="polite"
+       aria-atomic="true">
+
+    <!-- Slides injected by JS -->
+
+    <!-- Counter -->
+    <div class="counter" id="counter" aria-hidden="true">1 / 15</div>
+
+    <!-- Arrows -->
+    <button class="arrow arrow-left" id="btnPrev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="arrow arrow-right" id="btnNext" aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+  </div>
+
+  <!-- Dot indicators -->
+  <div class="dots-row" id="dotsRow" role="tablist" aria-label="Select image"></div>
+
+  <!-- Thumbnail strip -->
+  <div class="thumb-strip" id="thumbStrip" role="list" aria-label="Thumbnails">
+    <div class="thumb-inner" id="thumbInner"></div>
+  </div>
+
+</div>
+
+<script>
+  'use strict';
+
+  const SLIDES = [
+    { src: '/uploads/FullSizeRender-1.jpg',                                       caption: 'Group of skiers on snow-covered slope with alpine mountains' },
+    { src: '/uploads/FullSizeRender-4.jpg',                                       caption: 'Skiers in alpine ski area with blue sky' },
+    { src: '/uploads/IMG_0135.jpeg',                                              caption: 'Ski slope reflected in goggle lenses' },
+    { src: '/uploads/IMG_0148.jpeg',                                              caption: 'Cheering woman at TRYSIL sign on Norwegian mountain top' },
+    { src: '/uploads/IMG_9316.PNG',                                               caption: 'Skier at Harakiri sign on snow-covered slope' },
+    { src: '/uploads/IMG_0061.jpeg',                                              caption: 'Happy girl on skis waving on sunny snow-covered hill' },
+    { src: '/uploads/IMG_0062.jpeg',                                              caption: 'Man in ski helmet and pink ski goggles on ski slope' },
+    { src: '/uploads/IMG_0100.jpeg',                                              caption: 'Selfie on ski slope with blue sky and coniferous trees' },
+    { src: '/uploads/IMG_0102.jpeg',                                              caption: 'Woman with ski helmet and sunglasses on ski slope' },
+    { src: '/uploads/79414156770__DF1D6573-A626-4BF2-8876-4555CAB00D44.jpeg',    caption: 'Three skiers seen from above on snow-covered mountain' },
+    { src: '/uploads/P3080012.JPG',                                               caption: 'Ski helmet and orange ski goggles on ski poles in snow' },
+    { src: '/uploads/60484278992__064EFF5F-6337-4CA7-9060-B2437F54DD8B.JPG',    caption: 'Little girl with warm drink on ski trail' },
+    { src: '/uploads/IMG_1583.JPG',                                               caption: 'Skier in front of La Chavanne restaurant on slope' },
+    { src: '/uploads/IMG_9321.JPG',                                               caption: 'Skier resting at alpine hut after skiing' },
+    { src: '/uploads/IMG_9322.JPG',                                               caption: 'Skier on restaurant terrace after a day on the slopes' },
+  ];
+
+  const AUTOPLAY_MS  = 4500;
+  const TRANSITION_MS = 700;
+
+  /* ── DOM refs ─────────────────────────────────── */
+  const stage       = document.getElementById('stage');
+  const counter     = document.getElementById('counter');
+  const btnPrev     = document.getElementById('btnPrev');
+  const btnNext     = document.getElementById('btnNext');
+  const dotsRow     = document.getElementById('dotsRow');
+  const thumbInner  = document.getElementById('thumbInner');
+  const thumbStrip  = document.getElementById('thumbStrip');
+  const progressBar = document.getElementById('progressBar');
+
+  let current  = 0;
+  let paused   = false;
+  let timer    = null;
+  let progTimer = null;
+  let busy     = false;
+
+  /* ── BUILD SLIDES ─────────────────────────────── */
+  const slideEls = [];
+  SLIDES.forEach(function(data, i) {
+    const div = document.createElement('div');
+    div.className = 'slide' + (i === 0 ? ' active' : '');
+    div.setAttribute('role', 'img');
+    div.setAttribute('aria-label', data.caption);
+
+    const img = document.createElement('img');
+    img.src = data.src;
+    img.alt = data.caption;
+    img.loading = i === 0 ? 'eager' : 'lazy';
+    img.decoding = 'async';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'caption-overlay';
+    overlay.innerHTML = '<span class="caption-text">' + escHtml(data.caption) + '</span>';
+
+    div.appendChild(img);
+    div.appendChild(overlay);
+    stage.appendChild(div);
+    slideEls.push(div);
+  });
+
+  /* ── BUILD DOTS ───────────────────────────────── */
+  const dotEls = [];
+  SLIDES.forEach(function(_, i) {
+    const btn = document.createElement('button');
+    btn.className = 'dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    btn.setAttribute('aria-label', 'Image ' + (i + 1) + ': ' + SLIDES[i].caption);
+    btn.addEventListener('click', function() { goTo(i, true); });
+    dotsRow.appendChild(btn);
+    dotEls.push(btn);
+  });
+
+  /* ── BUILD THUMBS ─────────────────────────────── */
+  const thumbEls = [];
+  SLIDES.forEach(function(data, i) {
+    const li = document.createElement('div');
+    li.setAttribute('role', 'listitem');
+
+    const btn = document.createElement('button');
+    btn.className = 'thumb-btn' + (i === 0 ? ' active' : '');
+    btn.setAttribute('aria-label', 'Go to image ' + (i + 1) + ': ' + data.caption);
+
+    const img = document.createElement('img');
+    img.src = data.src;
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+
+    btn.appendChild(img);
+    btn.addEventListener('click', function() { goTo(i, true); });
+    li.appendChild(btn);
+    thumbInner.appendChild(li);
+    thumbEls.push(btn);
+  });
+
+  /* ── NAVIGATION ───────────────────────────────── */
+  function goTo(index, userAction) {
+    if (busy) return;
+    if (index === current && !userAction) return;
+
+    busy = true;
+    const prev = current;
+    current = (index + SLIDES.length) % SLIDES.length;
+
+    slideEls[prev].classList.remove('active');
+    slideEls[current].classList.add('active');
+
+    dotEls[prev].classList.remove('active');
+    dotEls[prev].setAttribute('aria-selected', 'false');
+    dotEls[current].classList.add('active');
+    dotEls[current].setAttribute('aria-selected', 'true');
+
+    thumbEls[prev].classList.remove('active');
+    thumbEls[current].classList.add('active');
+
+    counter.textContent = (current + 1) + ' / ' + SLIDES.length;
+
+    scrollThumbIntoView(current);
+
+    // Announce for screen readers
+    stage.setAttribute('aria-label', 'Image ' + (current + 1) + ' of ' + SLIDES.length + ': ' + SLIDES[current].caption);
+
+    setTimeout(function() { busy = false; }, TRANSITION_MS);
+
+    if (!paused) {
+      resetAutoplay();
+    }
+  }
+
+  function next() { goTo(current + 1, false); }
+  function prev() { goTo(current - 1, false); }
+
+  btnNext.addEventListener('click', function() { goTo(current + 1, true); });
+  btnPrev.addEventListener('click', function() { goTo(current - 1, true); });
+
+  /* ── KEYBOARD ─────────────────────────────────── */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft')  { goTo(current - 1, true); }
+    if (e.key === 'ArrowRight') { goTo(current + 1, true); }
+  });
+
+  /* ── AUTOPLAY + PROGRESS ──────────────────────── */
+  function startProgress() {
+    clearTimeout(progTimer);
+    progressBar.classList.remove('animating');
+    progressBar.style.width = '0%';
+    // Force reflow
+    void progressBar.offsetWidth;
+    progressBar.classList.add('animating');
+    progressBar.style.transitionDuration = AUTOPLAY_MS + 'ms';
+    progressBar.style.width = '100%';
+  }
+
+  function stopProgress() {
+    clearTimeout(progTimer);
+    progressBar.classList.remove('animating');
+    progressBar.style.width = '0%';
+  }
+
+  function startAutoplay() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      if (!paused) {
+        next();
+        startAutoplay();
+      }
+    }, AUTOPLAY_MS);
+    startProgress();
+  }
+
+  function resetAutoplay() {
+    clearTimeout(timer);
+    if (!paused) {
+      startAutoplay();
+    }
+  }
+
+  /* ── PAUSE ON HOVER ───────────────────────────── */
+  stage.addEventListener('mouseenter', function() {
+    paused = true;
+    clearTimeout(timer);
+    stopProgress();
+  });
+
+  stage.addEventListener('mouseleave', function() {
+    paused = false;
+    startAutoplay();
+  });
+
+  /* Touch pause (pause while finger is on screen) */
+  stage.addEventListener('touchstart', function() {
+    paused = true;
+    clearTimeout(timer);
+    stopProgress();
+  }, { passive: true });
+
+  stage.addEventListener('touchend', function() {
+    paused = false;
+    startAutoplay();
+  }, { passive: true });
+
+  /* ── SWIPE SUPPORT ────────────────────────────── */
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  stage.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', function(e) {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) { goTo(current + 1, true); }
+      else         { goTo(current - 1, true); }
+    }
+  }, { passive: true });
+
+  /* ── THUMB SCROLL INTO VIEW ───────────────────── */
+  function scrollThumbIntoView(i) {
+    const btn = thumbEls[i];
+    if (!btn) return;
+    const strip = thumbStrip;
+    const btnLeft   = btn.offsetLeft;
+    const btnWidth  = btn.offsetWidth;
+    const stripWidth = strip.clientWidth;
+    const scrollLeft = strip.scrollLeft;
+
+    // Center the thumb
+    const target = btnLeft - stripWidth / 2 + btnWidth / 2;
+    strip.scrollTo({ left: target, behavior: 'smooth' });
+  }
+
+  /* ── UTILITY ──────────────────────────────────── */
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ── INIT ─────────────────────────────────────── */
+  stage.setAttribute('aria-label', 'Image 1 of ' + SLIDES.length + ': ' + SLIDES[0].caption);
+  startAutoplay();
+</script>
+</body>
+</html>

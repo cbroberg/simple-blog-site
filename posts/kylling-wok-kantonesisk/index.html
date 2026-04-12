@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kylling Wok — Den klassiske kantonesiske wok-ret — Simple Blog</title>
+  <meta name="description" content="En saftig og farverig kylling wok med spinat, gulerødder og spidskål i en rig orange sauce. Lær historien bag retten, få den fulde opskrift og fakta fra Kina.">
+  <meta property="og:title" content="Kylling Wok — Den klassiske kantonesiske wok-ret — Simple Blog">
+  <meta property="og:description" content="En saftig og farverig kylling wok med spinat, gulerødder og spidskål i en rig orange sauce. Lær historien bag retten, få den fulde opskrift og fakta fra Kina.">
+  <meta property="og:type" content="website">
+  
+  <link rel="alternate" hreflang="da" href="/">
+  <style>
+:root {
+  --color-bg: #ffffff; --color-fg: #111827; --color-primary: #2563eb;
+  --color-muted: #6b7280; --color-border: #e5e7eb;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace; --radius: 0.5rem;
+  --spacing-section: clamp(2rem, 5vw, 4rem); --max-width: 72rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); line-height: 1.7; }
+a { color: var(--color-primary); }
+img { max-width: 100%; height: auto; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+header { border-bottom: 1px solid var(--color-border); padding: 1rem 0; margin-bottom: 2rem; }
+header nav { display: flex; align-items: center; gap: 2rem; }
+header .site-title { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--color-fg); }
+header nav a.nav-link { text-decoration: none; color: var(--color-muted); font-size: 0.9375rem; }
+header nav a.nav-link:hover { color: var(--color-fg); }
+main { padding: var(--spacing-section) 0; }
+footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-top: var(--spacing-section); color: var(--color-muted); font-size: 0.875rem; }
+.prose h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.prose p { margin-bottom: 1.25rem; }
+.prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: var(--radius); overflow-x: auto; margin-bottom: 1.25rem; font-family: var(--font-mono); font-size: 0.875rem; }
+.prose code { background: #f1f5f9; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-family: var(--font-mono); font-size: 0.875em; }
+.prose pre code { background: none; padding: 0; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; overflow: hidden; }
+.prose li { margin-bottom: 0.375rem; }
+.prose blockquote { border-left: 4px solid var(--color-primary); padding-left: 1rem; margin: 1.5rem 0; color: var(--color-muted); }
+.prose img { border-radius: var(--radius); margin: 1.5rem 0; }
+.prose img[style*="float:left"] { margin: 0.25rem 1.25rem 1.25rem 0; }
+.prose img[style*="float:right"] { margin: 0.25rem 0 1.25rem 1.25rem; }
+.prose h2, .prose h3 { clear: both; }
+.prose .interactive-embed iframe { background: #fff; }
+.prose::after { content: ""; display: table; clear: both; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s; }
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
+.card h2 a { text-decoration: none; color: var(--color-fg); }
+.card h2 a:hover { color: var(--color-primary); }
+.card .meta { color: var(--color-muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
+.card .excerpt { color: var(--color-muted); font-size: 0.9375rem; }
+.post-header { margin-bottom: 2rem; }
+.post-header h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+.post-meta { color: var(--color-muted); font-size: 0.875rem; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="site-title">Simple Blog</a>
+        <a href="/posts/" class="nav-link">Blog Posts</a>
+        <a href="/om-os/" class="nav-link">Om os</a>
+        <a href="/team/" class="nav-link">Team</a>
+        <a href="/services/" class="nav-link">Services</a>
+        <a href="/testimonials/" class="nav-link">Udtalelser</a>
+        <a href="/snippets/" class="nav-link">Snippets</a>
+        <a href="/en/" class="nav-link" style="margin-left:auto; font-size:0.8rem; border:1px solid var(--color-border); padding:0.2rem 0.6rem; border-radius:4px;" title="English">
+          🇬🇧 EN
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+      
+      <article>
+        <div class="post-header">
+          <h1>Kylling Wok — Den klassiske kantonesiske wok-ret</h1>
+          <div class="post-meta">31. januar 2025 · Redaktionen</div>
+        </div>
+        <div class="prose"><p><picture><source srcset="/uploads/chat-1776004141564-ucif-400w.webp 400w, /uploads/chat-1776004141564-ucif-800w.webp 800w, /uploads/chat-1776004141564-ucif-1200w.webp 1200w, /uploads/chat-1776004141564-ucif-1600w.webp 1600w" type="image/webp" sizes="(max-width: 800px) 100vw, 800px"><img src="/uploads/chat-1776004141564-ucif.jpg" alt="Kylling wok med grøntsager og nudler på middagsbord" style="width:100%"></picture></p>
+<h2>Hvad er kylling wok?</h2>
+<p>Kylling wok er en af de mest elskede retter i det kinesiske køkken — og med god grund. Retten kombinerer møre strimler af kylling med sprøde grøntsager i en aromatisk sauce, alt sammen tilberedt ved høj varme på få minutter. Resultatet er en ret fuld af smag, farve og tekstur.</p>
+<p>Den ret, du ser på billedet, er en klassisk <strong>kantonesisk wok-ret</strong> med kylling, spinat, gulerødder, spidskål og forårsløg i en orange-rød sauce — serveret med nudler.</p>
+<hr>
+<h2>Historien bag wok-madlavning</h2>
+<p>Wok-madlavning stammer fra Kina og har rødder, der går mere end <strong>2.000 år tilbage</strong>. Den runde, dybe pande — wokken — opstod i det sydlige Kina under Han-dynastiet (206 f.Kr. – 220 e.Kr.), hvor brændstof var dyrt og knapt. Den høje varme og hurtige tilberedning var ikke bare praktisk — det var nødvendighed.</p>
+<p>I Kanton-regionen (i dag Guangdong-provinsen i det sydlige Kina) udviklede sig en særlig madkultur baseret på friske råvarer, let saucering og minimal tilberedningstid. Kantonesisk mad betragtes i dag som en af de fire store kulinariske traditioner i Kina.</p>
+<blockquote>
+<p><em>&quot;Kina er madlavningens fædreland — og wokken er dens vigtigste redskab.&quot;</em></p>
+</blockquote>
+<hr>
+<h2>Fakta om Guangdong (Kanton)</h2>
+<ul>
+<li>🌍 <strong>Beliggenhed:</strong> Sydlige Kina, grænser til Hongkong og Macau</li>
+<li>👥 <strong>Befolkning:</strong> Ca. 130 millioner mennesker</li>
+<li>🍜 <strong>Madtradition:</strong> Kantonesisk køkken er det mest udbredte kinesiske køkken udenfor Kina</li>
+<li>🥢 <strong>Kendetegn:</strong> Friske ingredienser, let smag, minimal krydring — råvarernes naturlige smag fremhæves</li>
+<li>🏙️ <strong>Største by:</strong> Guangzhou (tidligere Kanton)</li>
+<li>🌶️ <strong>Saucebrug:</strong> Oyster sauce, hoisin sauce og let sødsur sauce er typiske for regionen</li>
+</ul>
+<hr>
+<h2>Opskrift: Kylling Wok med grøntsager og nudler</h2>
+<p><strong>Til 2-3 personer | Tilberedningstid: 25 minutter</strong></p>
+<h3>Ingredienser</h3>
+<p><strong>Til wokken:</strong></p>
+<ul>
+<li>400 g kyllingebryst — skåret i tynde strimler</li>
+<li>2 gulerødder — skrællet og skåret i skiver</li>
+<li>150 g frisk spinat</li>
+<li>¼ spidskål — snittet groft</li>
+<li>2 forårsløg — skåret skråt</li>
+<li>3 fed hvidløg — hakket</li>
+<li>1 spsk frisk ingefær — revet</li>
+<li>3 spsk oyster sauce</li>
+<li>1 spsk hoisin sauce</li>
+<li>1 spsk sojasauce</li>
+<li>1 tsk sesamolie</li>
+<li>2 spsk neutral olie til stegning</li>
+<li>Salt og peber</li>
+</ul>
+<p><strong>Til servering:</strong></p>
+<ul>
+<li>200 g æggenudler eller risnudler</li>
+<li>Sesamfrø og forårsløg til pynt</li>
+</ul>
+<h3>Fremgangsmåde</h3>
+<ol>
+<li><strong>Forbered ingredienserne:</strong> Skær kyllingen i tynde strimler og krydr med lidt salt og peber. Skær alle grøntsager klar.</li>
+<li><strong>Kog nudlerne</strong> efter pakningens anvisning. Sæt til side.</li>
+<li><strong>Varm wokken</strong> op ved høj varme til den begynder at ryge let. Tilsæt olien.</li>
+<li><strong>Steg kyllingen</strong> i 3-4 minutter til den er gylden og gennemstegt. Tag den op og sæt til side.</li>
+<li><strong>Steg grøntsagerne:</strong> Tilsæt hvidløg og ingefær i 30 sekunder, derefter gulerødder og spidskål i 2 minutter. Tilsæt spinat og forårsløg til sidst.</li>
+<li><strong>Tilsæt saucen:</strong> Hæld oyster sauce, hoisin sauce, sojasauce og sesamolie over. Rør godt rundt.</li>
+<li><strong>Kom kyllingen tilbage</strong> i wokken og bland det hele i 1 minut.</li>
+<li><strong>Servér</strong> straks over nudlerne med sesamfrø og ekstra forårsløg.</li>
+</ol>
+<hr>
+<h2>Tips til den perfekte wok</h2>
+<ul>
+<li>🔥 <strong>Høj varme er nøglen</strong> — wokken skal være varm nok til at ryge let</li>
+<li>⏱️ <strong>Tilbered hurtigt</strong> — for lang tilberedningstid giver bløde grøntsager</li>
+<li>🥄 <strong>Mis en place</strong> — hav alt klar før du starter, det går stærkt!</li>
+<li>🍳 <strong>Steg i portioner</strong> — for meget i wokken sænker temperaturen</li>
+</ul>
+<hr>
+<h2>Næringsindhold (pr. portion)</h2>
+<table>
+<thead>
+<tr>
+<th>Næringsstof</th>
+<th>Mængde</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Kalorier</td>
+<td>ca. 420 kcal</td>
+</tr>
+<tr>
+<td>Protein</td>
+<td>38 g</td>
+</tr>
+<tr>
+<td>Kulhydrat</td>
+<td>35 g</td>
+</tr>
+<tr>
+<td>Fedt</td>
+<td>12 g</td>
+</tr>
+<tr>
+<td>Fibre</td>
+<td>5 g</td>
+</tr>
+</tbody></table>
+</div>
+      </article>
+      <p style="margin-top: 3rem;"><a href="/posts/">← Alle indlæg</a></p>
+    
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Simple Blog — built with <a href="https://webhouse.app">webhouse.app</a></p>
+    </div>
+  </footer>
+</body>
+</html>
