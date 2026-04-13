@@ -58,6 +58,21 @@ footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-to
 .post-header h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
 .post-meta { color: var(--color-muted); font-size: 0.875rem; }
 </style>
+
+  <!-- webhouse.app enrichment -->
+  <meta name="generator" content="webhouse.app" />
+  <link rel="canonical" href="https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/pitchet-via-api/" />
+  <meta property="og:url" content="https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/pitchet-via-api/" />
+  <meta property="og:site_name" content="Simple Blog" />
+  <meta property="og:image" content="https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/IMG_0064.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pitchet via API - REST API Content Management Demo" />
+  <meta name="twitter:description" content="Se hvordan Pitchet via API fungerer. Opret indhold gennem REST API uden manual database-opsætning eller WordPress-installation." />
+  <meta name="twitter:image" content="https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/IMG_0064.jpeg" />
+  <link rel="icon" href="/simple-blog-site/favicon.ico" />
+  <link rel="apple-touch-icon" href="/simple-blog-site/apple-touch-icon.png" />
+  <link rel="manifest" href="/simple-blog-site/manifest.json" />
+  <meta name="theme-color" content="#000000" />
 </head>
 <body>
   <header>
@@ -96,7 +111,7 @@ footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-to
 <p>Please provide the actual text you&#39;d like me to rewrite and expand with more detail and context.</p>
 <p>Dette post blev oprettet via REST API mens vi demonstrerede CMS-enginen. Vi brugte en simpel HTTP POST-anmodning til endpointet /api/content/posts uden behov for nogen manuel database-opsætning eller <a href="/posts/far-og-datter-p-ski-i-norges-fjelde-en-oplevelse-for-livet">installation</a> af WordPress. Systemet accepterede dataene direkte gennem APIet og gemte dem <strong>automatisk i lageret</strong>, hvilket viser hvor streamlined og udviklervenligt denne tilgang til indholdsadministration er.</p>
 <p><div class="map-embed" style="margin: 1.5rem 0; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb;">
-        <div id="map-fftrdc" style="width:100%; height:350px;"></div>
+        <div id="map-xlvqze" style="width:100%; height:350px;"></div>
         <div style="padding: 0.5rem 0.75rem; font-size: 0.75rem; color: #666; background: #f9fafb;">
           📍 Riberhusvej 9, Blokhus, Danmark
         </div>
@@ -110,7 +125,7 @@ footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-to
               .then(function(d){
                 if(!d.length)return;
                 var lat=parseFloat(d[0].lat),lng=parseFloat(d[0].lon);
-                var m=L.map('map-fftrdc').setView([lat,lng],z);
+                var m=L.map('map-xlvqze').setView([lat,lng],z);
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
                   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom:19
                 }).addTo(m);
@@ -129,5 +144,7 @@ footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-to
       <p>&copy; 2026 Simple Blog — built with <a href="https://webhouse.app">webhouse.app</a></p>
     </div>
   </footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pitchet via API - REST API Content Management Demo","description":"Se hvordan Pitchet via API fungerer. Opret indhold gennem REST API uden manual database-opsætning eller WordPress-installation.","url":"https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/pitchet-via-api/","inLanguage":"en","publisher":{"@type":"Organization","name":"Simple Blog"},"image":"https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/IMG_0064.jpeg"}</script>
 </body>
 </html>
