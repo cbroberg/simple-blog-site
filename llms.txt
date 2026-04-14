@@ -25,7 +25,7 @@
 - [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/team/): Team — 2 members
 - [Testimonials — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/testimonials/): Testimonials — 1
 - [Træning til skiferie – Mærk forskellen på pisten](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/training-for-ski-holiday/): Få fitere til din skiferie med målrettet træning. Lær hvilke muskler du skal træne for at nyde hele dagen på pisten uden træthed.
-- [Hjem — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/): Simple Blog — 28 posts
+- [Hjem — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/): Simple Blog — 29 posts
 - [Om Os - AI-Native CMS-Engine @webhouse/cms](https://cbroberg.github.io/simple-blog-site/simple-blog-site/om-os/): Lær om @webhouse/cms, en AI-native CMS-engine med skema-drevet indhold, statisk sitegenerering og intelligent indholdsgenerering.
 - [5 berømte skiløbere fra Europa](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/5-ber-mte-skil-bere-fra-europa/): !Gruppe af skiløbere i farverige skijakker poserer på snedækkede pister med Dolomiterne i baggrunden 5 berømte skiløbere fra Europa Europa har fostret nogle af ...
 - [AALLM – LLM-værktøjer og AI-fællesskab i Aalborg](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/aallm-forening-for-llm-vaerktoejer/): AALLM er en forening i Aalborg dedikeret til Large Language Models (LLM). Lær ChatGPT, Claude og AI-værktøjer gennem workshops og netværk.
@@ -33,8 +33,9 @@
 - [Ski i Norge med datter - En uforglemmelig oplevelse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/far-og-datter-p-ski-i-norges-fjelde-en-oplevelse-for-livet/): Ski i Norge med min skønne datter er en magisk oplevelse. Få tips til at lære børn at stå på ski i Norges fantastiske fjelde.
 - [God CMS-dokumentation: Afgørende for dit system](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/god-dokumentation-i-cms/): Lær hvorfor dokumentation er essentielt i din CMS-løsning. Bedre onboarding, færre fejl og lettere vedligeholdelse af dit indholdsystem.
 - [Hello, World! | AI-Native CMS Engine](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/hello-world/): Welcome to @webhouse/cms, an AI-native CMS engine with schema-driven content modeling, static site generation, and REST API for content management.
-- [Alle indlæg — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/): Alle indlæg — 28
+- [Alle indlæg — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/): Alle indlæg — 29
 - [Kylling Wok — Klassisk Kantonesisk Opskrift](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/kylling-wok-kantonesisk/): Lær at lave autentisk kylling wok med grøntsager og nudler. Klassisk kantonesisk wok-ret med historie, fakta og nem opskrift.
+- [Mikkel Broberg – Partner & Udvikler hos WebHouse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/mikkel-broberg/): Møt Mikkel Broberg, partner og webudvikler hos WebHouse med over 20 års erfaring. Også gusmester i badeklubben.
 - [Pitchet via API - REST API Content Management Demo](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/pitchet-via-api/): Se hvordan Pitchet via API fungerer. Opret indhold gennem REST API uden manual database-opsætning eller WordPress-installation.
 - [Scenario 1 — Dansk kildeside](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/scenario-1-da/): En testside til at verificere manuel oversættelse fra dansk til engelsk.
 - [Scenario 2 — Automatisk oversættelse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/scenario-2-da/): En testside til automatisk AI-oversættelse ved publicering.
