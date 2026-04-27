@@ -1,71 +1,33 @@
-# Simple Blog
+# Site
 
-> A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
+## MCP Access
+- MCP endpoint: //mcp
+- Protocol: Model Context Protocol (SSE transport)
+- Auth: none required
+- Docs: //mcp/info
 
-## Pages
+## Collections
+- posts: Blog Posts (27 published documents)
+- pages: Pages (4 published documents)
 
-- [Home — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/): Simple Blog — 2 posts
-- [5 berühmte Skiläufer aus Europa | Legenden des Alpinskilaufs](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/posts/bekannte-europaeische-skilaeufer/): Entdecken Sie die 5 größten Skiläufer Europas: Marcel Hirscher, Ingemar Stenmark und weitere Legenden des Alpinskilaufs mit olympischen Erfolgen.
-- [Hühnchen-Wok — Klassisches kantonesisches Rezept](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/posts/huhn-wok-kantonesisch/): Erfahren Sie, wie Sie authentisches Hühnchen-Wok zubereiten. Klassisches kantonesisches Gericht mit Gemüse, Sauce und Nudeln — schnell und lecker.
-- [All Posts — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/posts/): All Posts — 2
-- [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/services/): Services — 1
-- [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/team/): Team — 3 members
-- [Testimonials — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/testimonials/): Testimonials — 1
-- [About Us — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/about/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-- [Home — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/): Simple Blog — 5 posts
-- [Chicken Wok — Classic Cantonese Stir-Fry Recipe](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/chicken-wok-cantonese/): Learn how to make authentic chicken wok, a classic Cantonese stir-fry with tender chicken, fresh vegetables and aromatic sauce. History, facts and easy recipe.
-- [5 Famous Ski Racers from Europe](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/famous-european-skiers/): From the Swiss Alps to the Norwegian mountains — meet five of the greatest ski racers Europe has ever produced.
-- [All Posts — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/): All Posts — 5
-- [Pitch via API - REST API CMS Demo](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/pitch-via-api/): See how Pitch via API works. Create content through REST API without manual database setup or WordPress installation.
-- [Scenario 1 — English translation](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/scenario-1-en/): A test page verifying manual translation from Danish to English.
-- [Skiferie: Hygge på pisten og ved bordet](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/ski-holiday-coziness-on-the-slopes-and-at-the-table/): Oplev den perfekte skiferie med hygge på pisten, varme drikke og god mad. Eventyr, fællesskab og après-ski i alpine skiresorts.
-- [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/services/): Services — 1
-- [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/team/): Team — 3 members
-- [Testimonials — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/testimonials/): Testimonials — 1
-- [Træning til skiferie – Mærk forskellen på pisten](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/training-for-ski-holiday/): Få fitere til din skiferie med målrettet træning. Lær hvilke muskler du skal træne for at nyde hele dagen på pisten uden træthed.
-- [Hjem — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/): Simple Blog — 29 posts
-- [Om Os - AI-Native CMS-Engine @webhouse/cms](https://cbroberg.github.io/simple-blog-site/simple-blog-site/om-os/): Lær om @webhouse/cms, en AI-native CMS-engine med skema-drevet indhold, statisk sitegenerering og intelligent indholdsgenerering.
-- [5 berømte skiløbere fra Europa](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/5-ber-mte-skil-bere-fra-europa/): !Gruppe af skiløbere i farverige skijakker poserer på snedækkede pister med Dolomiterne i baggrunden 5 berømte skiløbere fra Europa Europa har fostret nogle af ...
-- [AALLM – LLM-værktøjer og AI-fællesskab i Aalborg](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/aallm-forening-for-llm-vaerktoejer/): AALLM er en forening i Aalborg dedikeret til Large Language Models (LLM). Lær ChatGPT, Claude og AI-værktøjer gennem workshops og netværk.
-- [Building Websites with AI - Webhouse CMS Guide](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/building-with-ai/): Learn how to build production-ready websites with AI using @webhouse/cms. AI coding agents can create complete sites in minutes with our introspectable CMS.
-- [Ski i Norge med datter - En uforglemmelig oplevelse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/far-og-datter-p-ski-i-norges-fjelde-en-oplevelse-for-livet/): Ski i Norge med min skønne datter er en magisk oplevelse. Få tips til at lære børn at stå på ski i Norges fantastiske fjelde.
-- [God CMS-dokumentation: Afgørende for dit system](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/god-dokumentation-i-cms/): Lær hvorfor dokumentation er essentielt i din CMS-løsning. Bedre onboarding, færre fejl og lettere vedligeholdelse af dit indholdsystem.
-- [Hello, World! | AI-Native CMS Engine](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/hello-world/): Welcome to @webhouse/cms, an AI-native CMS engine with schema-driven content modeling, static site generation, and REST API for content management.
-- [Alle indlæg — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/): Alle indlæg — 29
-- [Kylling Wok — Klassisk Kantonesisk Opskrift](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/kylling-wok-kantonesisk/): Lær at lave autentisk kylling wok med grøntsager og nudler. Klassisk kantonesisk wok-ret med historie, fakta og nem opskrift.
-- [Mikkel Broberg – Partner & Udvikler hos WebHouse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/mikkel-broberg/): Møt Mikkel Broberg, partner og webudvikler hos WebHouse med over 20 års erfaring. Også gusmester i badeklubben.
-- [Pitchet via API - REST API Content Management Demo](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/pitchet-via-api/): Se hvordan Pitchet via API fungerer. Opret indhold gennem REST API uden manual database-opsætning eller WordPress-installation.
-- [Scenario 1 — Dansk kildeside](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/scenario-1-da/): En testside til at verificere manuel oversættelse fra dansk til engelsk.
-- [Scenario 2 — Automatisk oversættelse](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/scenario-2-da/): En testside til automatisk AI-oversættelse ved publicering.
-- [Scenario 3 — Bulk translate test](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/scenario-3-da/): En testside til bulk-oversættelse af hele sitet med AI.
-- [Åre, Sverige – Skandinaviens skijuvel og en by fuld af energi](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-aare-sverige/): Åre er Sveriges absolutte topresort og en af Europas bedste skidestinationer – med spændende pister, levende byliv og en unik skandinavisk stemning.
-- [Banff Skiferier i Rocky Mountains – 3 Resorts](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-banff-canada/): Oplev Banff i Canada med SkiBig3 – tre fantastiske skiresorts, 250+ pister og unik bjergnatur. Perfekt skiferier i Alberta.
-- [Chamonix, Frankrig – Skisportens Vugge ved Mont Blanc](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-chamonix-frankrig/): Oplev Chamonix ved Mont Blanc. Verdens bedste freeride, off-piste ski og legendariske Vallée Blanche. Perfekt for eventyrlige skiløbere.
-- [Cortina d'Ampezzo – Alpernes Dronning | Ski & Luksus](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-cortina-dampezzo-italien/): Cortina d'Ampezzo i Dolomitter: Verdenklasse ski, glamour og italiensk livsstil. Del af Dolomiti Superski med 1.200 km pister. Vinter-OL 2026.
-- [Courchevel Frankrig – Luksus Ski i Les Trois Vallées](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-courchevel-frankrig/): Courchevel er kronjuvelen i Les Trois Vallées. Luksus, michelin-stjernede restauranter og 600 km pister venter. Perfekt for familier og erfarne skiløbere.
-- [Dolomitterne Ski – UNESCO-området med 1.200 km pister](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-dolomitterne-italien/): Dolomitterne tilbyder verden's smukkeste skioplevelse med 1.200 km pister, UNESCO-status og autentisk italiensk madkultur. Superski Dolomiti venter.
-- [Skiferie: Hygge på pisten og ved bordet](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-hygge-mad-og-drikke/): Oplev den perfekte skiferie med hygge på pisten, varme drikke og god mad. Eventyr, fællesskab og après-ski i alpine skiresorts.
-- [Kitzbühel, Østrig – Skiløb, Glamour og Streif](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-kitzbuehel-oestrig/): Oplev Kitzbühel i Østrig: verdensklasse skiløb, pittoresk middelalderby og den frygtede Streif-nedkørsel. 200 km pister og luksus venter.
-- [Mayrhofen Østrig - Harakiri Skisportssted](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-mayrhofen-oestrig/): Oplev Mayrhofen, Østrig - hjem for Europas stejleste skipiste Harakiri med 78% hældning. 169 km pister, verdensklasse après-ski og familievenligt skiområde.
-- [Méribel Skiløb - Les Trois Vallées Bedste Destination](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-meribel-frankrig/): Oplev Méribel skiløb i Les Trois Vallées med 600 km pister og 180 lifter. Guide til pisterne, prisinfo og après-ski i Frankrig.
-- [St. Anton Østrig – Ski Arlberg & Après-ski](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-st-anton-oestrig/): St. Anton am Arlberg er legendens hjemsted for alpint skiløb. Oplev 300 km pister, Valluga-toppen og verdens bedste après-ski kultur i Østrig.
-- [Trysil Skiresort Norge | Skandinaviens største skiområde](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-trysil-norge/): Trysil skiresort er Skandinaviens største skiområde med 68 pister og 31 lifter. Perfekt for familier og erfarne skiløbere. Kun 3 timer fra Oslo.
-- [Val d'Isère, Frankrig – Verdenklasse skidestination](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-val-disere-frankrig/): Val d'Isère er Frankrigs præmie skidestination med 300 km pister, gletsjerskiing og autentisk byliv. Perfekt for alle niveauer.
-- [Verbier Schweiz - Det ultimative skimål for erfarne skiløbere](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-verbier-schweiz/): Oplev Verbier Schweiz - Alpernes vildeste skiparadis med 410 km pister, dramatiske bjerge og verdensklasse off-piste. Perfekt for eventyrlustige skiløbere.
-- [Whistler Blackcomb – Nordamerikas bedste skiresort](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-whistler-canada/): Whistler Blackcomb i Canada tilbyder 8.000 hektar skibart terræn, pister til alle niveauer og verdensklasse après-ski. Oplev det perfekte skiparadis!
-- [Zermatt, Schweiz – Skiferie under Matterhorn](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/skiferie-zermatt-schweiz/): Oplev Zermatt under det ikoniske Matterhorn. 360 km pister, bilfri by og gletskerskiing hele året. Schweiz' mest fotogene skidestination.
-- [Tennisalbue: Symptomer, årsager og genoptræning](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/tennisalbue-symptomer-rsager-og-effektiv-genoptr-ning/): Lær om tennisalbue: symptomer, årsager og effektiv genoptræning. Få hjælp til smerter i albuen fra en erfaren fysioterapeut.
-- [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/services/): Services — 1
-- [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/team/): Team — 3 members
-- [Udtalelser — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/testimonials/): Udtalelser — 1
-- [Træn dig klar til skiferie – forbedre dine præstationer](https://cbroberg.github.io/simple-blog-site/simple-blog-site/traening-til-skiferie/): Lær hvordan du træner kroppen korrekt til skiferie. Få tips til at undgå ømme muskler og få det maksimale ud af dine skiferier.
-- [Dynamisk Priskalkulator](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/pricing-calculator-with-sliders-da/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-- [Dynamic Pricing Calculator](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/pricing-calculator-with-sliders-en/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-- [Dynamic Pricing Calculator](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/pricing-calculator-with-sliders/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-- [❄️ Ski & Winter Slideshow](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/ski-vinter-slideshow-en/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-- [❄️ Ski & Vinter Slideshow](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/ski-vinter-slideshow/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
-
-Built with [webhouse.app](https://webhouse.app)
+## Recent Content
+- [5 Famous Ski Racers from Europe](//posts/famous-european-skiers)
+- [5 berühmte Skiläufer aus Europa](//posts/bekannte-europaeische-skilaeufer)
+- [Træn dig klar til skiferie – og mærk forskellen på pisterne](//pages/traening-til-skiferie)
+- [Train for Your Ski Holiday – and Feel the Difference on the Slopes](//pages/training-for-ski-holiday)
+- [Méribel, Frankrig – hjertet af Les Trois Vallées](//posts/skiferie-meribel-frankrig)
+- [Derfor er god dokumentation afgørende i din CMS-løsning](//posts/god-dokumentation-i-cms)
+- [Om Os](//pages/om-os)
+- [About Us](//pages/about-en)
+- [Pitch via API](//posts/pitch-via-api)
+- [Ski Holiday: Coziness on the Slopes and at the Table](//posts/ski-holiday-coziness-on-the-slopes-and-at-the-table)
+- [Skiferie: Hygge på pisten og ved bordet](//posts/skiferie-hygge-mad-og-drikke)
+- [Hello, World!](//posts/hello-world)
+- [Building Websites with AI](//posts/building-with-ai)
+- [Pitchet via API](//posts/pitchet-via-api)
+- [Tennisalbue: Symptomer, årsager og effektiv genoptræning](//posts/tennisalbue-symptomer-rsager-og-effektiv-genoptr-ning)
+- [Far og datter på ski i Norges fjelde – en oplevelse for livet](//posts/far-og-datter-p-ski-i-norges-fjelde-en-oplevelse-for-livet)
+- [Velkommen til AALLM – Foreningen for LLM-værktøjer i Aalborg](//posts/aallm-forening-for-llm-vaerktoejer)
+- [Whistler, Canada – Nordamerikas svar på det perfekte skiparadis](//posts/skiferie-whistler-canada)
+- [Banff, Canada – skiferie midt i Rocky Mountains](//posts/skiferie-banff-canada)
+- [Chamonix, Frankrig – skisportens vugge ved foden af Mont Blanc](//posts/skiferie-chamonix-frankrig)
