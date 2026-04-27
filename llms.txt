@@ -10,7 +10,7 @@
 - [All Posts — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/posts/): All Posts — 2
 - [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/services/): Services — 1
 - [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/team/): Team — 2 members
+- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/team/): Team — 3 members
 - [Testimonials — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/de/testimonials/): Testimonials — 1
 - [About Us — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/about/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
 - [Home — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/): Simple Blog — 5 posts
@@ -22,7 +22,7 @@
 - [Skiferie: Hygge på pisten og ved bordet](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/posts/ski-holiday-coziness-on-the-slopes-and-at-the-table/): Oplev den perfekte skiferie med hygge på pisten, varme drikke og god mad. Eventyr, fællesskab og après-ski i alpine skiresorts.
 - [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/services/): Services — 1
 - [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/team/): Team — 2 members
+- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/team/): Team — 3 members
 - [Testimonials — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/testimonials/): Testimonials — 1
 - [Træning til skiferie – Mærk forskellen på pisten](https://cbroberg.github.io/simple-blog-site/simple-blog-site/en/training-for-ski-holiday/): Få fitere til din skiferie med målrettet træning. Lær hvilke muskler du skal træne for at nyde hele dagen på pisten uden træthed.
 - [Hjem — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/): Simple Blog — 29 posts
@@ -59,7 +59,7 @@
 - [Tennisalbue: Symptomer, årsager og genoptræning](https://cbroberg.github.io/simple-blog-site/simple-blog-site/posts/tennisalbue-symptomer-rsager-og-effektiv-genoptr-ning/): Lær om tennisalbue: symptomer, årsager og effektiv genoptræning. Få hjælp til smerter i albuen fra en erfaren fysioterapeut.
 - [Services — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/services/): Services — 1
 - [Snippets — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/snippets/): Snippets — 1
-- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/team/): Team — 2 members
+- [Team — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/team/): Team — 3 members
 - [Udtalelser — Simple Blog](https://cbroberg.github.io/simple-blog-site/simple-blog-site/testimonials/): Udtalelser — 1
 - [Træn dig klar til skiferie – forbedre dine præstationer](https://cbroberg.github.io/simple-blog-site/simple-blog-site/traening-til-skiferie/): Lær hvordan du træner kroppen korrekt til skiferie. Få tips til at undgå ømme muskler og få det maksimale ud af dine skiferier.
 - [Dynamisk Priskalkulator](https://cbroberg.github.io/simple-blog-site/simple-blog-site/uploads/interactives/pricing-calculator-with-sliders-da/): A reference @webhouse/cms test site exercising every collection kind: page, snippet, data, form, and global.
