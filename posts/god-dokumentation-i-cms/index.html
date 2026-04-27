@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derfor er god dokumentation afgørende i din CMS-løsning — Simple Blog</title>
+  <meta name="description" content="God dokumentation er rygraden i enhver succesfuld CMS-løsning. Læs her, hvorfor det betaler sig at investere tid i dokumentation – og hvad du risikerer, hvis du ikke gør.">
+  <meta property="og:title" content="Derfor er god dokumentation afgørende i din CMS-løsning — Simple Blog">
+  <meta property="og:description" content="God dokumentation er rygraden i enhver succesfuld CMS-løsning. Læs her, hvorfor det betaler sig at investere tid i dokumentation – og hvad du risikerer, hvis du ikke gør.">
+  <meta property="og:type" content="website">
+  
+  <link rel="alternate" hreflang="da" href="/simple-blog-site/">
+  <style>
+:root {
+  --color-bg: #ffffff; --color-fg: #111827; --color-primary: #2563eb;
+  --color-muted: #6b7280; --color-border: #e5e7eb;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Courier New', monospace; --radius: 0.5rem;
+  --spacing-section: clamp(2rem, 5vw, 4rem); --max-width: 72rem;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); line-height: 1.7; }
+a { color: var(--color-primary); }
+img { max-width: 100%; height: auto; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+header { border-bottom: 1px solid var(--color-border); padding: 1rem 0; margin-bottom: 2rem; }
+header nav { display: flex; align-items: center; gap: 2rem; }
+header .site-title { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--color-fg); }
+header nav a.nav-link { text-decoration: none; color: var(--color-muted); font-size: 0.9375rem; }
+header nav a.nav-link:hover { color: var(--color-fg); }
+main { padding: var(--spacing-section) 0; }
+footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-top: var(--spacing-section); color: var(--color-muted); font-size: 0.875rem; }
+.prose h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+.prose p { margin-bottom: 1.25rem; }
+.prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: var(--radius); overflow-x: auto; margin-bottom: 1.25rem; font-family: var(--font-mono); font-size: 0.875rem; }
+.prose code { background: #f1f5f9; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-family: var(--font-mono); font-size: 0.875em; }
+.prose pre code { background: none; padding: 0; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; overflow: hidden; }
+.prose li { margin-bottom: 0.375rem; }
+.prose blockquote { border-left: 4px solid var(--color-primary); padding-left: 1rem; margin: 1.5rem 0; color: var(--color-muted); }
+.prose img { border-radius: var(--radius); margin: 1.5rem 0; }
+.prose img[style*="float:left"] { margin: 0.25rem 1.25rem 1.25rem 0; }
+.prose img[style*="float:right"] { margin: 0.25rem 0 1.25rem 1.25rem; }
+.prose h2, .prose h3 { clear: both; }
+.prose .interactive-embed iframe { background: #fff; }
+.prose::after { content: ""; display: table; clear: both; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s; }
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
+.card h2 a { text-decoration: none; color: var(--color-fg); }
+.card h2 a:hover { color: var(--color-primary); }
+.card .meta { color: var(--color-muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
+.card .excerpt { color: var(--color-muted); font-size: 0.9375rem; }
+.post-header { margin-bottom: 2rem; }
+.post-header h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+.post-meta { color: var(--color-muted); font-size: 0.875rem; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/simple-blog-site/" class="site-title">Simple Blog</a>
+        <a href="/simple-blog-site/posts/" class="nav-link">Blog Posts</a>
+        <a href="/simple-blog-site/om-os/" class="nav-link">Om os</a>
+        <a href="/simple-blog-site/team/" class="nav-link">Team</a>
+        <a href="/simple-blog-site/services/" class="nav-link">Services</a>
+        <a href="/simple-blog-site/testimonials/" class="nav-link">Udtalelser</a>
+        <a href="/simple-blog-site/snippets/" class="nav-link">Snippets</a>
+        <a href="/simple-blog-site/en/" class="nav-link" style="margin-left:auto; font-size:0.8rem; border:1px solid var(--color-border); padding:0.2rem 0.6rem; border-radius:4px;" title="English">
+          🇬🇧 EN
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    
+      
+      <article>
+        <div class="post-header">
+          <h1>Derfor er god dokumentation afgørende i din CMS-løsning</h1>
+          <div class="post-meta">13. juni 2025 · Redaktionen</div>
+        </div>
+        <div class="prose"><p><picture><source srcset="/simple-blog-site/uploads/IMG_7962-cw3v-400w.webp 400w, /simple-blog-site/uploads/IMG_7962-cw3v-800w.webp 800w, /simple-blog-site/uploads/IMG_7962-cw3v-1200w.webp 1200w, /simple-blog-site/uploads/IMG_7962-cw3v-1600w.webp 1600w" type="image/webp" sizes="(max-width: 800px) 100vw, 800px"><img src="/simple-blog-site/uploads/IMG_7962-cw3v.JPG" alt="Skærmbillede af CMS blogredaktør med kodevisning ved siden af" style="float:right; width:45%"></picture></p>
+<p>Når man arbejder med en CMS-løsning (Content Management System), er der mange ting, der skal fungere: design, indhold, integrationer og brugervenlighed. Men én ting overses alt for ofte – <strong>dokumentationen</strong>.</p>
+<p>God dokumentation er ikke bare en nice-to-have. Det er fundamentet, der holder hele løsningen sammen over tid.</p>
+<h2>Hvad er CMS-dokumentation?</h2>
+<p>Dokumentation i en CMS-løsning dækker over alt fra tekniske opsætningsvejledninger til redaktionelle retningslinjer. Det kan være:</p>
+<ul>
+<li>Beskrivelse af feltstrukturer og samlinger</li>
+<li>Vejledninger til redaktører om, hvordan indhold oprettes og publiceres</li>
+<li>Teknisk dokumentation til udviklere om integrationer og konfiguration</li>
+<li>Processer for godkendelse og publicering af indhold</li>
+</ul>
+<h2>Hvorfor er det så vigtigt?</h2>
+<h3>1. Onboarding bliver langt nemmere</h3>
+<p>Når en ny redaktør eller udvikler starter, er god dokumentation det første, de skal have adgang til. Uden det bruger de timer – måske dage – på at finde ud af, hvordan systemet fungerer. Med klar dokumentation er de produktive fra dag ét.</p>
+<h3>2. Færre fejl og misforståelser</h3>
+<p>Udokumenterede systemer fører til gætterier. Redaktører er usikre på, hvilke felter der er obligatoriske, hvilken billedstørrelse der kræves, eller hvordan en kategori adskiller sig fra en tag. Det resulterer i inkonsistent indhold og tekniske problemer.</p>
+<h3>3. Løsningen kan vedligeholdes af andre</h3>
+<p>Hvad sker der, hvis den person, der byggede løsningen, forlader projektet? Uden dokumentation er man afhængig af én persons hukommelse. Med dokumentation kan enhver overtage og videreudvikle systemet.</p>
+<h3>4. Hurtigere fejlfinding</h3>
+<p>Når noget går galt – og det gør det altid på et tidspunkt – er dokumentation guld værd. En klar oversigt over, hvordan systemet er sat op, gør det muligt at lokalisere og løse problemer på en brøkdel af den tid, det ellers ville tage.</p>
+<h3>5. Tillid og professionalisme</h3>
+<p>En velstruktureret dokumentation signalerer professionalisme over for kunder og samarbejdspartnere. Det viser, at løsningen er bygget til at holde – ikke kun til at virke i dag.</p>
+<h2>Hvad bør god dokumentation indeholde?</h2>
+<p>God CMS-dokumentation behøver ikke være et romanlignende dokument. Det vigtigste er, at den er:</p>
+<ul>
+<li><strong>Opdateret</strong> – Forældet dokumentation er næsten værre end ingen dokumentation.</li>
+<li><strong>Overskuelig</strong> – Brug overskrifter, lister og eksempler til at gøre det nemt at navigere i.</li>
+<li><strong>Tilgængelig</strong> – Alle, der arbejder med systemet, skal kunne finde og bruge den.</li>
+<li><strong>Kontekstuel</strong> – Forklar ikke bare <em>hvad</em>, men også <em>hvorfor</em>.</li>
+</ul>
+<h2>Kom i gang i dag</h2>
+<p>Hvis din CMS-løsning ikke har dokumentation endnu, er det aldrig for sent at starte. Begynd med det vigtigste: en oversigt over indholdstyperne, felterne og de redaktionelle processer. Selv en simpel README-fil kan gøre en enorm forskel.</p>
+<p>Investér tid i dokumentation nu – det sparer dig for mange frustrationer senere. 📝</p>
+</div>
+      </article>
+      <p style="margin-top: 3rem;"><a href="/simple-blog-site/posts/">← Alle indlæg</a></p>
+    
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Simple Blog — built with <a href="https://webhouse.app">webhouse.app</a></p>
+    </div>
+  </footer>
+</body>
+</html>

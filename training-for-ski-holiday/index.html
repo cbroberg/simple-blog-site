@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Træning til skiferie – Mærk forskellen på pisten — My Site</title>
+  <meta name="description" content="Få fitere til din skiferie med målrettet træning. Lær hvilke muskler du skal træne for at nyde hele dagen på pisten uden træthed.">
+  <meta property="og:title" content="Træning til skiferie – Mærk forskellen på pisten — My Site">
+  <meta property="og:description" content="Få fitere til din skiferie med målrettet træning. Lær hvilke muskler du skal træne for at nyde hele dagen på pisten uden træthed.">
+  <meta property="og:type" content="website">
+  
+  <link rel="canonical" href="/training-for-ski-holiday/">
+  <link rel="alternate" hreflang="en" href="/training-for-ski-holiday/">
+  
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-fg: #111827;
+      --color-primary: #2563eb;
+      --color-muted: #6b7280;
+      --color-border: #e5e7eb;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Courier New', monospace;
+      --font-size-base: 1rem;
+      --line-height-base: 1.7;
+      --spacing-base: 1rem;
+      --spacing-section: clamp(2rem, 5vw, 4rem);
+      --max-width: 72rem;
+      --radius: 0.5rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-fg); font-size: var(--font-size-base); line-height: var(--line-height-base); }
+    a { color: var(--color-primary); }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-base); }
+    header { border-bottom: 1px solid var(--color-border); padding: 1rem 0; margin-bottom: 2rem; }
+    header nav { display: flex; align-items: center; flex-wrap: wrap; position: relative; }
+    header .site-title { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--color-fg); flex: 1; }
+    .nav-toggle { display: none; }
+    .nav-burger { display: flex; flex-direction: column; gap: 4px; cursor: pointer; padding: 0.5rem; margin: -0.5rem; }
+    .nav-burger span { display: block; width: 20px; height: 2px; background: var(--color-fg); transition: transform 0.2s, opacity 0.2s; }
+    .nav-links { display: none; width: 100%; flex-direction: column; gap: 0; padding-top: 0.75rem; }
+    .nav-toggle:checked ~ .nav-links { display: flex; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+    header nav a.nav-link { text-decoration: none; color: var(--color-muted); font-size: 0.9375rem; transition: color 0.15s; padding: 0.75rem 0; display: block; }
+    header nav a.nav-link:hover { color: var(--color-fg); }
+    @media (min-width: 768px) {
+      .nav-burger { display: none; }
+      .nav-links { display: flex; width: auto; flex-direction: row; gap: 2rem; padding-top: 0; margin-left: 2rem; }
+      header nav a.nav-link { padding: 0; display: inline; }
+    }
+    main { padding: var(--spacing-section) 0; }
+    footer { border-top: 1px solid var(--color-border); padding: 1.5rem 0; margin-top: var(--spacing-section); color: var(--color-muted); font-size: 0.875rem; }
+    .prose h1 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+    .prose h2 { font-size: clamp(1.25rem, 3vw, 1.5rem); font-weight: 700; margin: 2rem 0 0.75rem; }
+    .prose h3 { font-size: clamp(1.1rem, 2.5vw, 1.25rem); font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    .prose p { margin-bottom: 1.25rem; }
+    .prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: var(--radius); overflow-x: auto; margin-bottom: 1.25rem; font-family: var(--font-mono); font-size: clamp(0.75rem, 1.5vw, 0.875rem); }
+    .prose code { background: #f1f5f9; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-family: var(--font-mono); font-size: 0.875em; }
+    .prose pre code { background: none; padding: 0; }
+    .prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+    .prose li { margin-bottom: 0.375rem; }
+    .prose blockquote { border-left: 4px solid var(--color-primary); padding-left: 1rem; margin: 1.5rem 0; color: var(--color-muted); }
+    .prose img { border-radius: var(--radius); margin: 1.5rem 0; }
+    .card-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 640px) {
+      .card-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    }
+    .card { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.5rem; transition: box-shadow 0.2s; }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .card h2 a { text-decoration: none; color: var(--color-fg); }
+    .card h2 a:hover { color: var(--color-primary); }
+    .card .meta { color: var(--color-muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
+    .card .excerpt { color: var(--color-muted); font-size: 0.9375rem; }
+    .hero { padding: var(--spacing-section) 0; text-align: center; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; margin-bottom: 1rem; }
+    .hero p { font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--color-muted); max-width: 42rem; margin: 0 auto 2rem; }
+    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-primary); color: #fff; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+    .btn:hover { opacity: 0.9; }
+    .post-header { margin-bottom: 2rem; }
+    .post-header h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+    .post-meta { color: var(--color-muted); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="/" class="site-title">My Site</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+        <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+        <div class="nav-links">
+          <a href="/posts/" class="nav-link">Blog Posts</a>
+<a href="/" class="nav-link">Pages</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      
+<article>
+  <header class="post-header">
+    <h1>Train for Your Ski Holiday – and Feel the Difference on the Slopes</h1>
+    <p class="post-meta">March 29, 2026</p>
+    
+  </header>
+  <div class="prose">
+    <p><img src="/uploads/og/skiferie-cortina-dampezzo-italien.jpg" alt="Group of skiers in colorful ski jackets posing on snow-covered slopes with the Dolomites in the background" title="float:right|width:45%"></p>
+<p>A ski holiday is one of the year&#39;s greatest experiences – but far too many people arrive in the mountains without properly preparing their bodies. The result? Sore muscles by day two, fatigue midday, and an experience that never reaches its full potential.</p>
+<p>With the right preparation, however, you can enjoy every single day on the slopes – from the first run in the morning to the last turn in the evening sun.</p>
+<hr>
+<h2>Why Is Fitness So Important for Skiing?</h2>
+<p>Skiing is far more physically demanding than most people realise. Even though you&#39;re not running or jumping, your body is constantly working to maintain balance, absorb shocks, and control movements at high speed.</p>
+<p>The primary muscles used during skiing are:</p>
+<ul>
+<li><strong>Quadriceps (thighs)</strong> – worked intensively during turns and braking</li>
+<li><strong>Hamstrings and glutes</strong> – stabilise the body in all movements</li>
+<li><strong>Calves and ankles</strong> – keep you steady in your boots</li>
+<li><strong>Core (abs and back)</strong> – maintain balance and protect your spine</li>
+</ul>
+<p>If these muscles aren&#39;t trained, they&#39;ll give out far sooner than you&#39;d like. That means short days on the slopes, aching muscles, and an increased risk of injury.</p>
+<hr>
+<h2>The Difference Between a Fit and Unfit Skier</h2>
+<p><img src="/uploads/og/skiferie-mayrhofen-oestrig.jpg" alt="Skier in black gear by a ski sign in Mayrhofen with snow-covered mountains in the background" title="float:left|width:40%"></p>
+<p>The difference is noticeable – and it shows up on day one:</p>
+<p><strong>The unfit skier:</strong></p>
+<ul>
+<li>Feels fatigue in the thighs after 3–4 runs</li>
+<li>Struggles to maintain technique when muscles are tired</li>
+<li>Risks falling and getting injured because the body doesn&#39;t react fast enough</li>
+<li>Spends the best hours in the lodge recovering for the next day</li>
+</ul>
+<p><strong>The fit skier:</strong></p>
+<ul>
+<li>Can maintain energy and technique all day long</li>
+<li>Has better balance and reacts faster in unexpected situations</li>
+<li>Takes on the difficult runs with confidence and joy</li>
+<li>Ends the day with a smile</li>
+</ul>
+<p>The difference isn&#39;t just physical – it&#39;s also about getting more value out of your holiday. A ski holiday is expensive. Getting the most out of every single day starts at home, months before departure.</p>
+<hr>
+<h2>The Best Exercises to Prepare for Skiing</h2>
+<p>You don&#39;t need a gym membership or advanced equipment. The following exercises are effective and can be done at home:</p>
+<h3>1. Squats and Wall Sit</h3>
+<p>Build strength in the thighs and glutes – the exact muscles you&#39;ll rely on in every turn.</p>
+<ul>
+<li><strong>Squat:</strong> 3 sets of 15 reps</li>
+<li><strong>Wall sit:</strong> Hold for 60 seconds, repeat 3 times</li>
+</ul>
+<h3>2. Lunges</h3>
+<p>Train leg stability and balance – essential for skiing on uneven terrain.</p>
+<ul>
+<li><strong>Forward lunges:</strong> 3 sets of 12 reps per leg</li>
+<li><strong>Side lunges:</strong> 3 sets of 10 reps per leg</li>
+</ul>
+<h3>3. Jump Training (Plyometrics)</h3>
+<p>Boost your explosive power and the ability to change direction quickly.</p>
+<ul>
+<li><strong>Jump squats:</strong> 3 sets of 10 reps</li>
+<li><strong>Lateral jumps:</strong> 3 sets of 15 reps</li>
+</ul>
+<h3>4. Balance and Stability</h3>
+<p>Practise standing on one leg, use a balance board, or try yoga poses.</p>
+<ul>
+<li><strong>Single-leg stand:</strong> 3 × 45 seconds per leg</li>
+<li><strong>Balance board:</strong> 5 minutes daily</li>
+</ul>
+<h3>5. Cardio and Endurance</h3>
+<p>Skiing demands cardiovascular endurance. Build it with:</p>
+<ul>
+<li>Running, cycling, or rowing</li>
+<li>Interval training (HIIT) – 20–30 minutes, 3 times a week</li>
+</ul>
+<h3>6. Core Training</h3>
+<p>A strong core protects your back and keeps you upright in challenging situations.</p>
+<ul>
+<li><strong>Plank:</strong> 3 × 45 seconds</li>
+<li><strong>Russian twist:</strong> 3 sets of 20 reps</li>
+<li><strong>Glute bridge:</strong> 3 sets of 15 reps</li>
+</ul>
+<hr>
+<h2>An 8-Week Training Plan</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Focus</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1–2</td>
+<td>Building base strength – squats, lunges, core</td>
+<td>3 × per week</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>Increase intensity – add jump training and balance</td>
+<td>4 × per week</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>Endurance and cardio – intervals + strength</td>
+<td>4–5 × per week</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td>Ski-specific training – combine all elements</td>
+<td>5 × per week</td>
+</tr>
+</tbody></table>
+<p>Start at least 8 weeks before your trip for the best results. Even 4 weeks of consistent training makes a significant difference.</p>
+<hr>
+<h2>Get More Out of Your Holiday</h2>
+<p><img src="/uploads/og/skiferie-innsbruck-oestrig.jpg" alt="Skier on a snow-covered slope with mountains in the background" title="float:right|width:40%"></p>
+<p>A ski holiday is an investment – in money, time, and experience. It&#39;s a shame to spend those precious days in the lodge nursing sore muscles when you could be carving turns in fresh powder with energy to spare.</p>
+<p>When your body is ready, everything changes:</p>
+<ul>
+<li>You ski longer and better</li>
+<li>You take on more challenging runs</li>
+<li>You recover faster and feel great the next day</li>
+<li>You enjoy the holiday fully – both on and off the slopes</li>
+</ul>
+<p>So put in the work before you go. Your future self – standing at the top of a mountain with fresh legs and a big smile – will thank you.</p>
+<p><strong>Good luck with your training – and have a fantastic ski holiday!</strong> ⛷️</p>
+
+  </div>
+</article>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>Built with @webhouse/cms</p>
+    </div>
+  </footer>
+</body>
+</html>
